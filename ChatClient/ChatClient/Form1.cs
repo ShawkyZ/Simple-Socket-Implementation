@@ -17,8 +17,6 @@ namespace ChatClient
 {
     public partial class Form1 : Form
     {
-        bool isShared = true;
-        int ms=0;
         Socket _socket;
         byte[] buffer = new byte[1024];
         public Form1()
