@@ -1,0 +1,9 @@
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\bin\Debug\ChatServer.exe.config
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\bin\Debug\ChatServer.exe
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\bin\Debug\ChatServer.pdb
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.csprojResolveAssemblyReference.cache
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.Form1.resources
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.Properties.Resources.resources
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.csproj.GenerateResource.Cache
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.exe
+c:\users\abdo\documents\visual studio 2013\Projects\ChatServer\ChatServer\obj\Debug\ChatServer.pdb
