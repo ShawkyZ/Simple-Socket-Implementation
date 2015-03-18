@@ -19,19 +19,6 @@ namespace ChatClient
     {
         bool isShared = true;
         int ms=0;
-        #region MetaTags for Screenshot
-        [DllImport("user32.dll", ExactSpelling = true, SetLastError = true)]
-        public static extern IntPtr GetDC(IntPtr hWnd);
-
-        [DllImport("user32.dll", ExactSpelling = true)]
-        public static extern IntPtr ReleaseDC(IntPtr hWnd, IntPtr hDC);
-
-        [DllImport("gdi32.dll", ExactSpelling = true)]
-        public static extern IntPtr BitBlt(IntPtr hDestDC, int x, int y, int nWidth, int nHeight, IntPtr hSrcDC, int xSrc, int ySrc, int dwRop);
-
-        [DllImport("user32.dll", EntryPoint = "GetDesktopWindow")]
-        public static extern IntPtr GetDesktopWindow();
-        #endregion
         Socket _socket;
         byte[] buffer = new byte[1024];
         public Form1()
@@ -107,38 +94,6 @@ namespace ChatClient
                 SendMsg(Encoding.ASCII.GetBytes("msg"+tbMsg.Text));
                 tbMessaging.Text += "\nClient Says: " + tbMsg.Text;
             }
-        }
-
-        void ShareScreen()
-        {
-            while(isShared)
-            {
-                Bitmap bmp = Screenshot();
-                ImageConverter ic = new ImageConverter();
-                byte[]img=(byte[])(ic.ConvertTo(bmp, typeof(byte[])));
-                string msg =Convert.ToBase64String(img);
-                SendMsg(Encoding.ASCII.GetBytes(msg));
-                Thread.Sleep(ms);
-            }
-        }
-        private static Bitmap Screenshot()
-        {
-            var screenWidth = Screen.PrimaryScreen.Bounds.Width;
-            var screenHeight = Screen.PrimaryScreen.Bounds.Height;
-
-            var screenBmp = new Bitmap(screenWidth, screenHeight);
-            var g = Graphics.FromImage(screenBmp);
-
-            var dc1 = GetDC(GetDesktopWindow());
-            var dc2 = g.GetHdc();
-
-            BitBlt(dc2, 0, 0, screenWidth, screenHeight, dc1, 0, 0, 13369376);
-
-            ReleaseDC(GetDesktopWindow(), dc1);
-            g.ReleaseHdc(dc2);
-            g.Dispose();
-
-            return screenBmp;
         }
     }
 }
