@@ -2,7 +2,7 @@
 
 A Simple Socket Implementation using C#.Net
 
-## Server Can:
+## The Server Can:
 
 1- Send Message to The Client.
 
