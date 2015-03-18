@@ -10,7 +10,7 @@ A Simple Socket Implementation using C#.Net
 
 2- Execute CMD Commands On The Client's Machine.
 
-Note: The Server is default bound to 6336 Port.
+Note: The Server is default bound to 6556 Port.
 
 ##The Client Can:
 
